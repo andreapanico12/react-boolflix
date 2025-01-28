@@ -1,8 +1,11 @@
-import React from 'react'
+import Filters from "./Filters"
 
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+      <h1>BOOLFLIX</h1>
+      <Filters/>
+    </div>
   )
 }
 

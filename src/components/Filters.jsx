@@ -1,8 +1,10 @@
-import React from 'react'
+import SearchBar from "./SearchBar"
 
 function Filters() {
   return (
-    <div>Filters</div>
+    <div>
+      <SearchBar/>
+    </div>
   )
 }
 

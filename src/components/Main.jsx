@@ -1,8 +1,10 @@
-import React from 'react'
+import ResultSection from "./ResultSection"
 
 function Main() {
   return (
-    <div>Main</div>
+    <div>
+      <ResultSection/>
+    </div>
   )
 }
 
