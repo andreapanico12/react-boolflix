@@ -20,6 +20,20 @@ function ResultSection() {
             originalTitle={movie.original_title}
             language={movie.original_language}
             vote={movie.vote_average}
+            posterPath={movie.poster_path}
+          />
+        ))}
+      </div>
+      <h2>Serie TV</h2>
+      <div className="card-container">
+        {tvShows.map((tvShow) => (
+          <ResultCard
+            key={tvShow.id}
+            title={tvShow.name}
+            originalTitle={tvShow.original_name}
+            language={tvShow.original_language}
+            vote={tvShow.vote_average}
+            posterPath={tvShow.poster_path}
           />
         ))}
       </div>

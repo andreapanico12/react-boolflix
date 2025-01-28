@@ -46,7 +46,8 @@ const GlobalStateProvider = ({children}) => {
 
     fetchMedia("tv")
       .then((tvRes) => {
-        setMovies(tvRes.data.results)
+        setTvShows(tvRes.data.results)
+        console.log(tvRes.data.results)
       })
 
       .catch(() =>{
