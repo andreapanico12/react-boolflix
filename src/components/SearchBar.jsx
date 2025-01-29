@@ -3,18 +3,26 @@ import { GlobalStateContext } from "../context/GlobalContext"
 
 function SearchBar() {
 
+  const keyUphandler = (e) => {
+    if(e.key === `Enter`){
+      searchMedia()
+    }
+  }
+
   const {query, setQuery, searchMedia} = useContext(GlobalStateContext)
   return (
-    <div>
+    <>
       <input
+       className="searchbar"
        type="text"
        value={query}
        onChange={(e) => setQuery(e.target.value)}
        placeholder="Cerca un film o una serie TV..."
+       onKeyUp={keyUphandler}
 
        />
-       <button onClick={searchMedia}>Cerca</button>
-    </div>
+       <button className="searchbar-btn" onClick={searchMedia}>Cerca</button>
+    </>
   )
 }
 

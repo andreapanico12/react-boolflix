@@ -9,34 +9,30 @@ function ResultSection() {
   if(error) return <p>{error}</p>
 
 
+  const renderCards = (items, type) => (
+    <>
+      <h2>{type}</h2>
+      <div className="card-container">
+        {items.map((item) => (
+          <ResultCard
+            key={item.id}
+            title={item.title || item.name}
+            originalTitle={item.original_title || item.original_name}
+            language={item.original_language}
+            vote={item.vote_average}
+            posterPath={item.poster_path}
+          />
+        ))}
+      </div>
+    </>
+  )
+
+
   return (
-    <div>
-      <h2>FILM</h2>
-      <div className="card-container">
-        {movies.map((movie) => (
-          <ResultCard
-            key={movie.id}
-            title={movie.title}
-            originalTitle={movie.original_title}
-            language={movie.original_language}
-            vote={movie.vote_average}
-            posterPath={movie.poster_path}
-          />
-        ))}
-      </div>
-      <h2>Serie TV</h2>
-      <div className="card-container">
-        {tvShows.map((tvShow) => (
-          <ResultCard
-            key={tvShow.id}
-            title={tvShow.name}
-            originalTitle={tvShow.original_name}
-            language={tvShow.original_language}
-            vote={tvShow.vote_average}
-            posterPath={tvShow.poster_path}
-          />
-        ))}
-      </div>
+    <div className="results-container">
+      {renderCards(movies, "FILM")}
+      {renderCards(tvShows, "SERIE TV")}
+              
     </div>
   )
 }

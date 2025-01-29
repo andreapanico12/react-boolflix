@@ -2,9 +2,12 @@ import ResultSection from "./ResultSection"
 
 function Main() {
   return (
-    <div>
-      <ResultSection/>
-    </div>
+    <main>
+      <div >
+        <ResultSection/>
+      </div>
+      
+    </main>
   )
 }
 

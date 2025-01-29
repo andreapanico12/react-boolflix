@@ -2,10 +2,10 @@ import Filters from "./Filters"
 
 function Header() {
   return (
-    <div>
+    <header>
       <h1>BOOLFLIX</h1>
       <Filters/>
-    </div>
+    </header>
   )
 }
 
